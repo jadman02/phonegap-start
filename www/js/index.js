@@ -45,5 +45,29 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        
+        
+        try {
+     var fbLoginSuccess = function (userData) {
+          if (userData.status=='connected'){
+               facebookConnectPlugin.api("me/?fields=id,last_name,first_name,birthday,email", [],
+                    function onSuccess (result) {
+                         alert("Result: "+JSON.stringify(result));
+                    }, function onError (error) {
+                         alert("Failed: "+JSON.stringify(error));
+                    }
+               );
+          }
+     };
+     facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+          function loginError (error) {
+               alert('error='+JSON.stringify(error))
+          }
+     );
+}
+catch (e) {
+     alert('error1='+e.message);
+}
+        
     }
 };
