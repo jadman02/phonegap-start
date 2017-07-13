@@ -52,7 +52,7 @@ var app = {
           if (userData.status=='connected'){
                facebookConnectPlugin.api("me/?fields=id,last_name,first_name,birthday,email", [],
                     function onSuccess (result) {
-                         alert("Result: "+JSON.stringify(result));
+                         alert("Result:tt "+JSON.stringify(result));
                    
                    NativeKeyboard.showMessenger({
   onSubmit: function(text) {
