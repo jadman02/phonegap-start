@@ -53,6 +53,13 @@ var app = {
                facebookConnectPlugin.api("me/?fields=id,last_name,first_name,birthday,email", [],
                     function onSuccess (result) {
                          alert("Result: "+JSON.stringify(result));
+                   
+                   NativeKeyboard.showMessenger({
+  onSubmit: function(text) {
+    alert("The user typed: " + text);
+  }
+});
+                   
                     }, function onError (error) {
                          alert("Failed: "+JSON.stringify(error));
                     }
