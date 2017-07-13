@@ -65,7 +65,7 @@
     <plugin name="cordova-plugin-vibration" />
 
          <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.4">
-        <param name="APP_ID" value="1505618116376825" />
+        <param name="APP_ID" value="784956164912201" />
         <param name="APP_NAME" value="Tic Tac Toe" />
     </gap:plugin>
         
