@@ -55,7 +55,7 @@ var app = {
                          alert("Result:tt "+JSON.stringify(result));
 
 document.addEventListener("screenshot", function() {
-    window.alert("Screenshot");
+   alert("Screenshot");
 }, false);
                    
                     }, function onError (error) {
